@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<script language= "javascript">
+ function login()
+ {
+ if(document.f1.text1.value=="")
+ {
+ alert("fields shoould not be left blank");
+ document.f1.text1.value="";
+ document.f1.text1.focus();
+ return false;
+ }
+ else
+ if(document.f1.password1.value=="")
+ {
+ alert("fields shoould not be left blank");
+ document.f1.password1.value="";
+ document.f1.password1.focus();
+ return false;
+ }
+else
+{
+	f1.action="./superlogin";
+	f1.submit();
+}
+ }
+ </script>
+<BODY bgcolor=lightyellow>
+<form name =f1>
+<P><STRONG 
+style="BACKGROUND-COLOR: white"></STRONG>&nbsp;
+<TABLE border=0 align=center cellPadding=1 cellSpacing=1 id=TABLE1 width="100%">
+  
+  <TR >
+    <TD width="25%">&nbsp;</TD>
+    <TD>
+      <P align=center><STRONG><FONT size=5><U 
+      style="BACKGROUND-COLOR: white; COLOR: forestgreen" 
+     >e-Care Help Desk 
+      System</U></FONT></STRONG></P></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>  </TD></TR>
+  <TR>
+    <TD>
+      <P align=center style="COLOR: forestgreen" 
+     ><STRONG>User Name</STRONG> </P></TD>
+    <TD>
+      <P align=center><INPUT id=text1 name=text1 
+     ></P></TD>
+    <TD>&nbsp;<A href="./sforgetpwd.html">Forget Password</A></TD></TR>
+  <TR>
+    <TD>
+      <P align=center 
+     style="COLOR: forestgreen" 
+     ><STRONG>&nbsp;&nbsp;Password&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></P></TD>
+    <TD>
+      <P align=center><INPUT id=password1 name=password1 type=password ></P></TD>
+    <TD><A href="./schangepwd.html">Change Password</A></TD></TR>
+  <TR>
+    <TD> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </TD>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>
+      <P align=center><INPUT id=button1 name=button1 onclick=login() type=button value=" Login ">&nbsp; 
+<INPUT id=reset1 name=reset1 style="HEIGHT: 24px; WIDTH: 69px" type=reset value=Reset></P></TD>
+    <TD>&nbsp;</TD></TR></TABLE></P></form>
+
+ </BODY></HTML>
+
+
+
+
+
+
+
+
+
+<HTML>
+<BODY >
+<script language=vbscript>
+
+</script>
+<script language=vbscript>
+</script>
+</BODY>
+</HTML>

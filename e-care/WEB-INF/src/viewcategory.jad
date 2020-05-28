@@ -1,0 +1,117 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 7/23/1996 5:28:04 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   viewcategory.java
+
+import java.io.*;
+import java.sql.*;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+public class viewcategory extends HttpServlet
+{
+
+    public viewcategory()
+    {
+    }
+
+    public void init(ServletConfig servletconfig)
+        throws ServletException
+    {
+        super.init(servletconfig);
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:india", "ecare", "ecare");
+            st = con.createStatement();
+            System.out.println("statement is created");
+        }
+        catch(Exception exception)
+        {
+            System.out.println(exception);
+        }
+    }
+
+    public void service(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
+        throws ServletException, IOException
+    {
+        System.out.println("inside service");
+        String s = "yes";
+        String s1 = "";
+        String s2 = "";
+        String s3 = "";
+        PrintWriter printwriter = httpservletresponse.getWriter();
+        httpservletresponse.setContentType("text/html");
+        String s4 = httpservletrequest.getParameter("c");
+        System.out.println(s4);
+        String s5 = httpservletrequest.getParameter("n");
+        System.out.println(s5);
+        s = httpservletrequest.getParameter("s");
+        System.out.println(s);
+        try
+        {
+            rs = st.executeQuery("select * from categoryies where categoryid='" + s4 + "'");
+            if(rs.next())
+            {
+                s1 = rs.getString(1);
+                System.out.println("categorycode is :" + s1);
+                s2 = rs.getString(2);
+                System.out.println("categoryname is:" + s2);
+                s3 = rs.getString(3);
+                System.out.println("categorystatus is:" + s3);
+            }
+            printwriter.println("<HTML>");
+            printwriter.println("<HEAD>");
+            printwriter.println("<TITLE></TITLE>");
+            printwriter.println("</HEAD>");
+            printwriter.println("<BODY>");
+            printwriter.println("<form name=f1 action='./categories1'>");
+            printwriter.println("<P>");
+            printwriter.println("<TABLE border=0 align='center' cellPadding=1 cellSpacing=1 width=75%>");
+            printwriter.println(" <TR>");
+            printwriter.println(" </TR>");
+            printwriter.println(" <TR>");
+            printwriter.println("<TD></TD>");
+            printwriter.println("<TD><FONT size=4><STRONG><U>View Category Details</U></STRONG></FONT></TD></TR>");
+            printwriter.println("<TR>");
+            printwriter.println(" <TD></TD>");
+            printwriter.println(" <TD>  </TD></TR>");
+            printwriter.println("<TR>");
+            printwriter.println(" <TD></TD>");
+            printwriter.println(" <TD>  </TD></TR>");
+            printwriter.println("<TR>");
+            printwriter.println(" <TD></TD>");
+            printwriter.println(" <TD>  </TD></TR>");
+            printwriter.println("<TR>");
+            printwriter.println("<TD><strong>CategoryId</strong></TD>");
+            printwriter.println("<TD>" + s1 + "</TD></TR>");
+            printwriter.println("<TR>");
+            printwriter.println(" <TD><strong>CategoryName</strong></TD>");
+            printwriter.println("<TD>" + s2 + "</TD></TR>");
+            printwriter.println(" <TR>");
+            printwriter.println("<TD><strong>Status</strong></TD>");
+            printwriter.println("<TD>" + s3 + "</TD></TR>");
+            printwriter.println(" <TR>");
+            printwriter.println(" <TR>");
+            printwriter.println("<TD></TD>");
+            printwriter.println("<TD></TD></TR>");
+            printwriter.println("<TD></TD>");
+            printwriter.println("<TD><INPUT id=submit1 name=submit1 type=submit value=OK></TD></TR>");
+            printwriter.println("<TR>");
+            printwriter.println("<TD></TD>");
+            printwriter.println("<TD></TD></TR></TABLE></P>");
+            printwriter.println("</form>");
+            printwriter.println("</BODY>");
+            printwriter.println("</HTML>");
+        }
+        catch(Exception exception)
+        {
+            System.out.println(exception);
+        }
+    }
+
+    Connection con;
+    Statement st;
+    ResultSet rs;
+}

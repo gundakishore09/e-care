@@ -1,0 +1,149 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 7/23/1996 2:51:03 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   problemPost1.java
+
+import java.io.*;
+import java.sql.*;
+import java.util.Date;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+public class problemPost1 extends HttpServlet
+{
+
+    public problemPost1()
+    {
+    }
+
+    public void init(ServletConfig servletconfig)
+        throws ServletException
+    {
+        super.init(servletconfig);
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:india", "ecare", "ecare");
+            st = con.createStatement();
+            st1 = con.createStatement();
+            System.out.println("statement is created");
+        }
+        catch(Exception exception)
+        {
+            System.out.println(exception.getMessage());
+        }
+    }
+
+    public void service(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
+        throws ServletException, IOException
+    {
+        String s = "";
+        String s1 = "";
+        String s2 = "";
+        String s3 = "";
+        String s4 = "";
+        String s5 = "";
+        String s6 = "";
+        String s7 = "";
+        String s8 = "";
+        PrintWriter printwriter = httpservletresponse.getWriter();
+        httpservletresponse.setContentType("text/html");
+        HttpSession httpsession = httpservletrequest.getSession(true);
+        try
+        {
+            Date date = new Date();
+            String s9 = httpservletrequest.getParameter("select1");
+            String s10 = httpservletrequest.getParameter("select2");
+            String s11 = httpservletrequest.getParameter("TEXTAREA1");
+            String s12 = httpservletrequest.getParameter("day");
+            String s13 = httpservletrequest.getParameter("month");
+            String s14 = httpservletrequest.getParameter("year");
+            String s15 = s13 + "/" + s12 + "/" + s14;
+            Date date1 = new Date(s15);
+            System.out.println(" cureent date : " + date);
+            System.out.println(" report  date : " + date1);
+            if(date1.before(date))
+            {
+                httpservletresponse.sendRedirect("./postproblemd.html");
+            } else
+            {
+                int i = Integer.parseInt(s12);
+                int j = Integer.parseInt(s14);
+                String s16 = i + "/" + s13 + "/" + j;
+                System.out.println(s16);
+                System.out.println("repdate.before(curdate)  " + date1.before(date));
+                httpsession.putValue("catid1", s9);
+                httpsession.putValue("modid1", s10);
+                System.out.println("before select nvl");
+                rs = st.executeQuery("select max(ticket) from problemrequest");
+                System.out.println("result set");
+                int k;
+                for(k = 0; rs.next(); k = rs.getInt(1));
+                if(k == 0)
+                    k = 1;
+                else
+                    k++;
+                String s17 = "null";
+                String s18 = "unfinished";
+                String s19 = "";
+                String s20 = "";
+                String s21 = "";
+                int l = st1.executeUpdate("insert into problemrequest( TICKET, CATEGORYID, MODULEID, PROBLEMDESCRIPTION,LASTSOLUTION, USER_ID, PROBLEMREPORTDATE)  values('" + k + "','" + s9 + "','" + s10 + "','" + s11 + "','" + s17 + "','" + s3 + "','" + s16 + "')");
+                if(l == 1)
+                {
+                    int i1 = st.executeUpdate(" insert into problemhistory values('" + k + "','" + s16 + "','" + s11 + "','" + s19 + "','" + s20 + "','" + s21 + "','" + s18 + "')");
+                    printwriter.println("<HTML>");
+                    printwriter.println("<HEAD><TITLE></TITLE>");
+                    printwriter.println("<script language = 'JavaScript'>");
+                    printwriter.println("</script>");
+                    printwriter.println("<BODY>");
+                    printwriter.println("<form name=f1 action='./corporateuserview.html' target='_parent'>");
+                    printwriter.println("<P>&nbsp;</P>");
+                    printwriter.println("<P>&nbsp;</P>");
+                    printwriter.println("<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></P>");
+                    printwriter.println("<P align=center style='COLOR: forestgreen'><STRONG> ");
+                    printwriter.println("<U>Ticket Confirmation</U></STRONG></P>");
+                    printwriter.println("<P align=center>&nbsp;</P>");
+                    printwriter.println("<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+                    printwriter.println("<TABLE border=0 cellPadding=1 cellSpacing=1 width=75% align=center>");
+                    printwriter.println("<TR>");
+                    printwriter.println("<TD></TD>");
+                    printwriter.println("<TD></TD></TR>");
+                    printwriter.println("<TR>");
+                    printwriter.println("<TD>");
+                    printwriter.println(" <P align=left><STRONG>Problem is posted and your ");
+                    printwriter.println("      Ticket Number is&nbsp;&nbsp;:</STRONG></P></TD>");
+                    printwriter.println("    <TD>" + k + "</TD></TR>");
+                    printwriter.println("  <TR>");
+                    printwriter.println("    <TD>");
+                    printwriter.println("      <P align=left><STRONG>  ");
+                    printwriter.println("       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></P></TD>");
+                    printwriter.println("    <TD></TD></TR>");
+                    printwriter.println("  <TR>");
+                    printwriter.println("    <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
+                    printwriter.println("<INPUT id=submit1 name=submit1 type=submit value='Ok'></TD>");
+                    printwriter.println("    <TD>");
+                    printwriter.println("      <P>&nbsp;</P>");
+                    printwriter.println("      <P>&nbsp;</P></TD></TR></TABLE>&nbsp;&nbsp;</STRONG></P>");
+                    printwriter.println("<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></P>");
+                    printwriter.println("<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></P>");
+                    printwriter.println("<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
+                    printwriter.println("</STRONG></P>");
+                    printwriter.println("<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></P></form>");
+                    printwriter.println("</BODY></HTML>");
+                }
+                System.out.println("i value is   :  " + l);
+            }
+        }
+        catch(Exception exception)
+        {
+            printwriter.println(exception.getMessage());
+        }
+    }
+
+    Connection con;
+    Statement st;
+    Statement st1;
+    ResultSet rs;
+}

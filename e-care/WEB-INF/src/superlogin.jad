@@ -1,0 +1,130 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 7/23/1996 2:47:08 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   superlogin.java
+
+import java.io.*;
+import java.sql.*;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+public class superlogin extends HttpServlet
+{
+
+    public superlogin()
+    {
+        flag = 0;
+    }
+
+    public void init(ServletConfig servletconfig)
+        throws ServletException
+    {
+        super.init(servletconfig);
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:india", "ecare", "ecare");
+            st = con.createStatement();
+            st1 = con.createStatement();
+            System.out.println("statement is created");
+        }
+        catch(Exception exception)
+        {
+            System.out.println(exception);
+        }
+    }
+
+    public void service(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
+        throws ServletException, IOException
+    {
+        String s = "";
+        String s1 = "";
+        String s2 = "";
+        String s3 = "";
+        String s4 = "";
+        String s5 = "";
+        String s6 = "";
+        String s7 = "";
+        String s8 = "";
+        String s9 = "";
+        String s10 = "";
+        String s11 = "";
+        String s12 = "";
+        PrintWriter printwriter = httpservletresponse.getWriter();
+        httpservletresponse.setContentType("text/html");
+        HttpSession httpsession = httpservletrequest.getSession(true);
+        try
+        {
+            String s13 = httpservletrequest.getParameter("text1");
+            String s14 = httpservletrequest.getParameter("password1");
+            httpsession.putValue("name", s13);
+            httpsession.putValue("l1empname", s13);
+            rs = st.executeQuery("select user_id,password from superuserprofile where user_id='" + s13 + "' and password='" + s14 + "'");
+            if(rs.next())
+            {
+                httpsession.putValue("first", s13);
+                String s15 = rs.getString(1);
+                String s17 = rs.getString(2);
+                System.out.println("INSIDE SUPERUSER uname is " + s15 + " pwd is " + s17);
+                httpservletresponse.sendRedirect("./superuserview.html");
+            }
+            System.out.println("before query");
+            rs1 = st1.executeQuery("select levelname,user_id,password from hdemp1 where user_id='" + s13 + "'");
+            if(rs1.next())
+            {
+                System.out.println("inside hdemp1");
+                String s16 = rs1.getString(1);
+                String s18 = rs1.getString(2);
+                String s19 = rs1.getString(3);
+                System.out.println(" level is " + s16 + " : user name is " + s18 + "and  passwd is " + s19);
+                if(s18.equals(s13) && s19.equals(s14))
+                {
+                    System.out.println(" level type :  " + s16);
+                    String s20 = "";
+                    httpsession.putValue(s20, s13);
+                    Object obj = httpsession.getValue(s20);
+                    System.out.println("get value user-id" + obj.toString());
+                    System.out.println("user-id" + s13);
+                    if(s16.equals("Level1"))
+                        httpservletresponse.sendRedirect("./firstleveladminstrator.html");
+                    else
+                    if(s16.equals("Level2"))
+                        httpservletresponse.sendRedirect("./secondleveladminstrator.html");
+                    else
+                    if(s16.equals("SupportTeam"))
+                        httpservletresponse.sendRedirect("./thirdleveladministrator.html");
+                }
+            } else
+            {
+                System.out.println("Inside else");
+                printwriter.println("<html>");
+                printwriter.println("<HEAD>");
+                printwriter.println("<TITLE></TITLE>");
+                printwriter.println("<BODY>");
+                printwriter.println("<form name=f1 action='./superlogin.html' style='COLOR: forestgreen'>");
+                printwriter.println("<P>&nbsp;</P>");
+                printwriter.println("<P align=center>&nbsp;</P> ");
+                printwriter.println("<P align=center>&nbsp;</P>");
+                printwriter.println("<P align=center><STRONG><FONT size=4>Invalid Username/Password </FONT></STRONG></P>");
+                printwriter.println("<P align=center><FONT size=4><STRONG>Please Check again</STRONG></FONT></P>");
+                printwriter.println("<P align=center>&nbsp;</P> ");
+                printwriter.println("<P align=center><INPUT id=submit1 name=submit1 style='HEIGHT: 24px; WIDTH: 60px' type=submit value=OK></P>");
+                printwriter.println("</form>");
+                printwriter.println("</BODY>");
+                printwriter.println("</html>");
+            }
+        }
+        catch(Exception exception)
+        {
+            System.out.println(exception);
+        }
+    }
+
+    Connection con;
+    Statement st;
+    Statement st1;
+    ResultSet rs;
+    ResultSet rs1;
+    int flag;
+}

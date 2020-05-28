@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+<servlet>
+   <servlet-name>addcategory1</servlet-name>
+   <servlet-class>addcategory1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>addcategory1</servlet-name>
+   <url-pattern>/addcategory1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>addcompanyinfo</servlet-name>
+   <servlet-class>addcompanyinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>addcompanyinfo</servlet-name>
+   <url-pattern>/addcompanyinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>addemployee1</servlet-name>
+   <servlet-class>addemployee1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>addemployee1</servlet-name>
+   <url-pattern>/addemployee1</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>addlevel</servlet-name>
+   <servlet-class>addlevel</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>addlevel</servlet-name>
+   <url-pattern>/addlevel</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>addmodule</servlet-name>
+   <servlet-class>addmodule</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>addmodule</servlet-name>
+   <url-pattern>/addmodule</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>addsupportteam</servlet-name>
+   <servlet-class>addsupportteam</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>addsupportteam</servlet-name>
+   <url-pattern>/addsupportteam</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>box</servlet-name>
+   <servlet-class>box</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>box</servlet-name>
+   <url-pattern>/box</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>cat1</servlet-name>
+   <servlet-class>cat1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>cat1</servlet-name>
+   <url-pattern>/cat1</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>categories</servlet-name>
+   <servlet-class>categories</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>categories</servlet-name>
+   <url-pattern>/categories</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>categories1</servlet-name>
+   <servlet-class>categories1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>categories1</servlet-name>
+   <url-pattern>/categories1</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>categories2</servlet-name>
+   <servlet-class>categories2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>categories2</servlet-name>
+   <url-pattern>/categories2</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>categories3</servlet-name>
+   <servlet-class>categories3</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>categories3</servlet-name>
+   <url-pattern>/categories3</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>categoriesfirstlevel</servlet-name>
+   <servlet-class>categoriesfirstlevel</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>categoriesfirstlevel</servlet-name>
+   <url-pattern>/categoriesfirstlevel</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>categoryuserlist</servlet-name>
+   <servlet-class>categoryuserlist</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>categoryuserlist</servlet-name>
+   <url-pattern>/categoryuserlist</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>cforgetpwd</servlet-name>
+   <servlet-class>cforgetpwd</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>cforgetpwd</servlet-name>
+   <url-pattern>/cforgetpwd</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>changepwd</servlet-name>
+   <servlet-class>changepwd</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>changepwd</servlet-name>
+   <url-pattern>/changepwd</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+   <servlet-name>clientprofile</servlet-name>
+   <servlet-class>clientprofile</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>clientprofile</servlet-name>
+   <url-pattern>/clientprofile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>companyinfo</servlet-name>
+   <servlet-class>companyinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>companyinfo</servlet-name>
+   <url-pattern>/companyinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>compose</servlet-name>
+   <servlet-class>compose</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>compose</servlet-name>
+   <url-pattern>/compose</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>compose1</servlet-name>
+   <servlet-class>compose1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>compose1</servlet-name>
+   <url-pattern>/compose1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>compose2</servlet-name>
+   <servlet-class>compose2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>compose2</servlet-name>
+   <url-pattern>/compose2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>compose3</servlet-name>
+   <servlet-class>compose3</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>compose3</servlet-name>
+   <url-pattern>/compose3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>corpchangepwd</servlet-name>
+   <servlet-class>corpchangepwd</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>corpchangepwd</servlet-name>
+   <url-pattern>/corpchangepwd</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>createuser</servlet-name>
+   <servlet-class>createuser</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>createuser</servlet-name>
+   <url-pattern>/createuser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>deletecategory</servlet-name>
+   <servlet-class>deletecategory</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>deletecategory</servlet-name>
+   <url-pattern>/deletecategory</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>deletecompanyinfo</servlet-name>
+   <servlet-class>deletecompanyinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>deletecompanyinfo</servlet-name>
+   <url-pattern>/deletecompanyinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>deleteemployee</servlet-name>
+   <servlet-class>deleteemployee</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>deleteemployee</servlet-name>
+   <url-pattern>/deleteemployee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>deletemodule</servlet-name>
+   <servlet-class>deletemodule</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>deletemodule</servlet-name>
+   <url-pattern>/deletemodule</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>deleteuser</servlet-name>
+   <servlet-class>deleteuser</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>deleteuser</servlet-name>
+   <url-pattern>/deleteuser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>elogin</servlet-name>
+   <servlet-class>elogin</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>elogin</servlet-name>
+   <url-pattern>/elogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>employee</servlet-name>
+   <servlet-class>employee</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>employee</servlet-name>
+   <url-pattern>/employee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>ex1</servlet-name>
+   <servlet-class>ex1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ex1</servlet-name>
+   <url-pattern>/ex1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>firstleveladminstrator</servlet-name>
+   <servlet-class>firstleveladminstrator</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>firstleveladminstrator</servlet-name>
+   <url-pattern>/firstleveladminstrator</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>forwardTo</servlet-name>
+   <servlet-class>forwardTo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>forwardTo</servlet-name>
+   <url-pattern>/forwardTo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>inbox</servlet-name>
+   <servlet-class>inbox</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>inbox</servlet-name>
+   <url-pattern>/inbox</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>inbox1</servlet-name>
+   <servlet-class>inbox1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>inbox1</servlet-name>
+   <url-pattern>/inbox1</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>inbox2</servlet-name>
+   <servlet-class>inbox2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>inbox2</servlet-name>
+   <url-pattern>/inbox2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>inbox3</servlet-name>
+   <servlet-class>inbox3</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>inbox3</servlet-name>
+   <url-pattern>/inbox3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>level1module</servlet-name>
+   <servlet-class>level1module</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>level1module</servlet-name>
+   <url-pattern>/level1module</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>level1profile</servlet-name>
+   <servlet-class>level1profile</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>level1profile</servlet-name>
+   <url-pattern>/level1profile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>level2profile</servlet-name>
+   <servlet-class>level2profile</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>level2profile</servlet-name>
+   <url-pattern>/level2profile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>level3profile</servlet-name>
+   <servlet-class>level3profile</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>level3profile</servlet-name>
+   <url-pattern>/level3profile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>levelonesolution</servlet-name>
+   <servlet-class>levelonesolution</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>levelonesolution</servlet-name>
+   <url-pattern>/levelonesolution</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>levels</servlet-name>
+   <servlet-class>levels</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>levels</servlet-name>
+   <url-pattern>/levels</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>levelsolforward</servlet-name>
+   <servlet-class>levelsolforward</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>levelsolforward</servlet-name>
+   <url-pattern>/levelsolforward</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>levelsolreply</servlet-name>
+   <servlet-class>levelsolreply</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>levelsolreply</servlet-name>
+   <url-pattern>/levelsolreply</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>messagefrom</servlet-name>
+   <servlet-class>messagefrom</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>messagefrom</servlet-name>
+   <url-pattern>/messagefrom</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>messagefrom1</servlet-name>
+   <servlet-class>messagefrom1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>messagefrom1</servlet-name>
+   <url-pattern>/messagefrom1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>messagefrom2</servlet-name>
+   <servlet-class>messagefrom2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>messagefrom2</servlet-name>
+   <url-pattern>/messagefrom2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>messagefrom3</servlet-name>
+   <servlet-class>messagefrom3</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>messagefrom3</servlet-name>
+   <url-pattern>/messagefrom3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>mod1</servlet-name>
+   <servlet-class>mod1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>mod1</servlet-name>
+   <url-pattern>/mod1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>modifycategories</servlet-name>
+   <servlet-class>modifycategories</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>modifycategories</servlet-name>
+   <url-pattern>/modifycategories</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>modifycompanyinfo</servlet-name>
+   <servlet-class>modifycompanyinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>modifycompanyinfo</servlet-name>
+   <url-pattern>/modifycompanyinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>modifylevel</servlet-name>
+   <servlet-class>modifylevel</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>modifylevel</servlet-name>
+   <url-pattern>/modifylevel</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>modifymodule</servlet-name>
+   <servlet-class>modifymodule</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>modifymodule</servlet-name>
+   <url-pattern>/modifymodule</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>modifysupportteam</servlet-name>
+   <servlet-class>modifysupportteam</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>modifysupportteam</servlet-name>
+   <url-pattern>/modifysupportteam</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>modifyuser</servlet-name>
+   <servlet-class>modifyuser</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>modifyuser</servlet-name>
+   <url-pattern>/modifyuser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>module</servlet-name>
+   <servlet-class>module</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>module</servlet-name>
+   <url-pattern>/module</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>module2</servlet-name>
+   <servlet-class>module2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>module2</servlet-name>
+   <url-pattern>/module2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>postproblem</servlet-name>
+   <servlet-class>postproblem</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>postproblem</servlet-name>
+   <url-pattern>/postproblem</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>problemcomplete</servlet-name>
+   <servlet-class>problemcomplete</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>problemcomplete</servlet-name>
+   <url-pattern>/problemcomplete</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>problempending</servlet-name>
+   <servlet-class>problempending</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>problempending</servlet-name>
+   <url-pattern>/problempending</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>problemPost</servlet-name>
+   <servlet-class>problemPost</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>problemPost</servlet-name>
+   <url-pattern>/problemPost</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>profile1</servlet-name>
+   <servlet-class>profile1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>profile1</servlet-name>
+   <url-pattern>/profile1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>reg1</servlet-name>
+   <servlet-class>reg1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>reg1</servlet-name>
+   <url-pattern>/reg1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>reports</servlet-name>
+   <servlet-class>reports</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>reports</servlet-name>
+   <url-pattern>/reports</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>selectcompany</servlet-name>
+   <servlet-class>selectcompany</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>selectcompany</servlet-name>
+   <url-pattern>/selectcompany</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>sforgetpwd</servlet-name>
+   <servlet-class>sforgetpwd</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>sforgetpwd</servlet-name>
+   <url-pattern>/sforgetpwd</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>solforwardto</servlet-name>
+   <servlet-class>solforwardto</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>solforwardto</servlet-name>
+   <url-pattern>/solforwardto</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>solreplyto</servlet-name>
+   <servlet-class>solreplyto</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>solreplyto</servlet-name>
+   <url-pattern>/solreplyto</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>steam1</servlet-name>
+   <servlet-class>steam1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>steam1</servlet-name>
+   <url-pattern>/steam1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>storecompany</servlet-name>
+   <servlet-class>storecompany</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>storecompany</servlet-name>
+   <url-pattern>/storecompany</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>sub</servlet-name>
+   <servlet-class>sub</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>sub</servlet-name>
+   <url-pattern>/sub</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>superlogin</servlet-name>
+   <servlet-class>superlogin</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>superlogin</servlet-name>
+   <url-pattern>/superlogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>supermessages</servlet-name>
+   <servlet-class>supermessages</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>supermessages</servlet-name>
+   <url-pattern>/supermessages</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>superusermessage</servlet-name>
+   <servlet-class>superusermessage</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>superusermessage</servlet-name>
+   <url-pattern>/superusermessage</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>support</servlet-name>
+   <servlet-class>support</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>support</servlet-name>
+   <url-pattern>/support</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>supportteam</servlet-name>
+   <servlet-class>supportteam</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>supportteam</servlet-name>
+   <url-pattern>/supportteam</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>supportteamlevel1</servlet-name>
+   <servlet-class>supportteamlevel1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>supportteamlevel1</servlet-name>
+   <url-pattern>/supportteamlevel1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updatecategory1</servlet-name>
+   <servlet-class>updatecategory1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updatecategory1</servlet-name>
+   <url-pattern>/updatecategory1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updatecompanyinfo</servlet-name>
+   <servlet-class>updatecompanyinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updatecompanyinfo</servlet-name>
+   <url-pattern>/updatecompanyinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updatelevel</servlet-name>
+   <servlet-class>updatelevel</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updatelevel</servlet-name>
+   <url-pattern>/updatelevel</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updatelevel1category</servlet-name>
+   <servlet-class>updatelevel1category</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updatelevel1category</servlet-name>
+   <url-pattern>/updatelevel1category</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updatemodule</servlet-name>
+   <servlet-class>updatemodule</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updatemodule</servlet-name>
+   <url-pattern>/updatemodule</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updatesupportteam</servlet-name>
+   <servlet-class>updatesupportteam</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updatesupportteam</servlet-name>
+   <url-pattern>/updatesupportteam</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>updateuser</servlet-name>
+   <servlet-class>updateuser</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>updateuser</servlet-name>
+   <url-pattern>/updateuser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>userinfo1</servlet-name>
+   <servlet-class>userinfo1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>userinfo1</servlet-name>
+   <url-pattern>/userinfo1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>userprofile</servlet-name>
+   <servlet-class>userprofile</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>userprofile</servlet-name>
+   <url-pattern>/userprofile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewcategory</servlet-name>
+   <servlet-class>viewcategory</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewcategory</servlet-name>
+   <url-pattern>/viewcategory</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewcategory2</servlet-name>
+   <servlet-class>viewcategory2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewcategory2</servlet-name>
+   <url-pattern>/viewcategory2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewcompanyinfo</servlet-name>
+   <servlet-class>viewcompanyinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewcompanyinfo</servlet-name>
+   <url-pattern>/viewcompanyinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewemployee</servlet-name>
+   <servlet-class>viewemployee</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewemployee</servlet-name>
+   <url-pattern>/viewemployee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewemployee1</servlet-name>
+   <servlet-class>viewemployee1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewemployee1</servlet-name>
+   <url-pattern>/viewemployee1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewproblem</servlet-name>
+   <servlet-class>viewproblem</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewproblem</servlet-name>
+   <url-pattern>/viewproblem</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewticket</servlet-name>
+   <servlet-class>viewticket</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewticket</servlet-name>
+   <url-pattern>/viewticket</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>viewuserinfo</servlet-name>
+   <servlet-class>viewuserinfo</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>viewuserinfo</servlet-name>
+   <url-pattern>/viewuserinfo</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>welcome</servlet-name>
+   <servlet-class>welcome</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>welcome</servlet-name>
+   <url-pattern>/welcome</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>xlogin</servlet-name>
+   <servlet-class>xlogin</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>xlogin</servlet-name>
+   <url-pattern>/xlogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>problemPost1</servlet-name>
+   <servlet-class>problemPost1</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>problemPost1</servlet-name>
+   <url-pattern>/problemPost1</url-pattern>
+</servlet-mapping>
+<servlet>
+   <servlet-name>reg2</servlet-name>
+   <servlet-class>reg2</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>reg2</servlet-name>
+   <url-pattern>/reg2</url-pattern>
+</servlet-mapping>
+
+<welcome-file-list>
+<welcome-file>home.html</welcome-file>
+</welcome-file-list>
+
+</web-app>

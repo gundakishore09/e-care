@@ -1,0 +1,359 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>ecare solutions
+</TITLE>
+<script language = "JavaScript">
+
+function number()
+{
+	var n=document.f1.phno.value;
+	if(isNaN(n))
+	{
+	alert("Enter only numbers");
+	document.f1.phno.value="";
+	document.f1.phno.focus();
+	}
+}
+function zipnum()
+{
+	var n=document.f1.zipcode.value;
+	if(isNaN(n))
+	{
+	alert("Enter only numbers");
+	document.f1.zipcode.value="";
+	document.f1.zipcode.focus()
+	}
+}
+
+function email()
+		{
+		var str=document.f1.email_id.value;
+  if (str.indexOf('@')==-1)
+	{
+			alert("Not Valid E-Mail Address");
+                        document.f1.email_id.focus();
+			return false;
+			}
+		else if (str.indexOf('.')==-1)
+			{
+			alert("Not Valid E-Mail Address");
+                        document.f1.email_id.focus();
+                        return false;
+			}
+		else if (str.indexOf('.')==str.length-1)
+			{
+			alert("Not Valid E-Mail Address");
+			document.f1.email_id.focus();
+                         return false;
+			}
+		else if (str.indexOf('@')==str.indexOf('.')-1 || str.indexOf('.')==str.indexOf('@')-1)
+			{
+			alert("Not Valid E-Mail Address");
+                        document.f1.email_id.focus();
+                              return false;
+			}
+		else if (str.indexOf('@')==0 || str.indexOf('.')==0)
+			{
+			alert("Not Valid E-Mail Address");
+                        document.f1.email_id.focus();
+                        return false;
+			}
+		}
+
+
+ 
+
+function chkpass()
+{
+
+var st=document.f1.password.value ;
+var len=st.length;
+
+if (len<=5){
+   alert("password should not be less than six characters");
+   document.f1.password.value="";
+   document.f1.confpwd.value="";
+   f1.password.focus();
+ }
+ else if(f1.password.value != f1.confpwd.value )
+	{
+ 
+	alert("mismatch password reenter");
+	document.f1.password.value="";
+	document.f1.confpwd.value="";
+	f1.password.focus();
+ }  
+ }  
+function registration()
+{
+	if(f1.fname.value=="")  
+	{
+	alert("first name should not be empty");
+	f1.fname.focus();
+	}
+	else if(f1.address.value=="")
+	    {
+	    alert("address should  not be left blank");
+	    f1.address.focus();
+		}
+	else if(f1.user_id.value=="")
+		{
+		alert("user_id should not be empty");
+		f1.user_id.focus();
+		}
+	else if(f1.hintsolution.value=="")
+	     {
+	     alert("hintsolution should not be left blank");
+	     f1.hintsolution.focus();
+	     }
+	     
+	else
+	{
+           	document.f1.action="./reg2";
+		document.f1.submit();
+		}
+
+
+}
+
+	
+            
+</script>
+<META content="text/html; charset=unicode" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgcolor=lightyellow> 
+<form name=f1 > 
+<P>
+<TABLE border=0 align="center" cellPadding=1 cellSpacing=1 width="75%" id=TABLE2>
+  
+  <TR>
+    <TD>
+      <P align=center><FONT color=forestgreen 
+      size=4>&nbsp;</FONT></P></TD>
+    <TD><FONT color=forestgreen><FONT size=4><STRONG><U>REGISTRATION FORM</U> </STRONG></FONT></FONT></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><FONT size=3><STRONG>FIRST NAME</STRONG> 
+        </FONT></P></TD>
+    <TD>
+      <P align=left><INPUT id=fname name=fname 
+      ></P></TD></TR>
+  <TR>
+    <TD>
+      <P 
+      align=left><STRONG>LAST NAME</STRONG> 
+        
+      &nbsp;</P> 
+    </TD>
+    <TD>
+      <P align=left><INPUT id=lname name=lname></P></TD></TR>
+  <TR>
+    <TD>
+      <P 
+      align=left><STRONG>ADDRESS</STRONG></P>    </TD>
+    <TD>
+      <P align=left><INPUT id=address name=address></P></TD></TR>
+  <TR>
+    <TD>
+      <P 
+      align=left><STRONG>PHONE NUMBER </STRONG>
+        </P> 
+        </TD>
+    <TD>
+      <P align=left><INPUT id=phno name=phno onblur="number()"></P></TD></TR>
+  <TR>
+    <TD>
+      <P 
+      align=left><STRONG>STATE</STRONG>
+      </P> 
+      </TD>
+    <TD>
+      <P align=left><INPUT id=text1 name=city></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left 
+     ><STRONG>CITY</STRONG>
+      </P></TD>
+    <TD>
+      <P align=left><INPUT id=text2 name=state></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left 
+     ><STRONG>COUNTRY</STRONG></P>
+    <TD>
+      <P align=left><INPUT id=text3 name=country></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>ZIPCODE</STRONG></P>
+      </TD><TD>
+      <P align=left><INPUT id=zipcode name=zipcode onblur=zipnum()></P>
+      </TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>GENDER</STRONG></P></TD>
+    <TD><INPUT id=gender name=gender style="HEIGHT: 20px; WIDTH: 30px" 
+      type=radio value=F>Female&nbsp; <INPUT CHECKED id=gender name=gender 
+      style="HEIGHT: 20px; WIDTH: 32px" type=radio value=M>Male</TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>EMAIL_ID</STRONG> </P> 
+       <TD>
+      <P align=left><INPUT id=email_id name=email_id onBlur="email()"></P></TD></TR>
+  <TR>
+    <TD><STRONG>CTYPE</STRONG></TD>
+    <TD><SELECT id=select1 name=ctype 
+      style="HEIGHT: 22px; WIDTH: 154px"> <OPTION 
+  selected value="corpuser">corporate user</OPTION><OPTION 
+        value="corpclient">corporate client</OPTION></SELECT></TD></TR>
+  <TR>
+    <TD>
+      <P 
+      align=left><STRONG>USER_ID&nbsp;</STRONG> 
+      </P></TD>
+    <TD>
+      <P align=left><INPUT id=user_id name=user_id></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>PASSWORD</STRONG></P></TD>
+    <TD>
+      <P align=left><INPUT id=password name=password
+       
+      type=password></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>CONFIRMATION PWD</STRONG> </P> 
+         <TD>
+      <P align=left><INPUT id=confpwd  name=confpwd 
+      type=password onblur="chkpass()"> </P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>HINT QUESTION</STRONG> </P></TD>
+    <TD>
+      <P align=left><SELECT id=hintquestion name=hintquestion 
+      style="HEIGHT: 22px; WIDTH: 156px"> <OPTION selected 
+        value="your name?">your name?</OPTION><OPTION 
+        value="your favourite color?">your favourite color?</OPTION><OPTION 
+        value="your favourite sport">your favourite sport</OPTION><OPTION 
+        value="your favourite place">your favourite 
+        place</OPTION><OPTION value="your favourite actor">your favourite 
+        actor</OPTION><OPTION value="your favourite food">your favourite 
+        food</OPTION><OPTION value="your date of birth">your 
+        date of birth</OPTION><OPTION value="your place of birth">your place of 
+        birth</OPTION><OPTION value="your best friend">your best 
+        friend</OPTION><OPTION value=""></OPTION></SELECT></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><STRONG>HINT SOLUTION</STRONG> </P> </TD>
+    <TD><INPUT id=hintsolution name=hintsolution 
+     ></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><INPUT id=submit1 name=submit1 onclick=registration() type=button value=Submit>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT id=reset1 name=reset1 type=reset value=Reset></TD></TR></TABLE></P>
+<DL>
+  <DT>
+  <P>&nbsp;</P></DT></DL>
+<P align=center>&nbsp;</P>
+<DL></DL>
+<TABLE border=0 cellPadding=1 cellSpacing=1 width="75%" style="HEIGHT: 516px; WIDTH: 388px" id=TABLE1>
+  <TBODY>
+  
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> 
+      &nbsp;</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> 
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> 
+    </TD>
+    <TD>
+  </TD></TR>
+  <TR>
+    <TD></TD>
+    <TD>&nbsp;
+      </TD>
+  <TR>
+    <TD> 
+       
+      </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> 
+      </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> 
+      </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD> 
+      </TD>&nbsp;&nbsp;</TD>
+    <TD></TD></TR></TBODY></TABLE>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</P>
+<P>&nbsp;</P></form></BODY></HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<HTML>
+<BODY >
+<script language=vbscript>
+
+</script>
+<script language=vbscript>
+</script>
+</BODY>
+</HTML>
+<HTML>
+<BODY >
+<script language=vbscript>
+
+</script>
+<script language=vbscript>
+</script>
+</BODY>
+</HTML>

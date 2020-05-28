@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<SCRIPT language="javascript">
+function emp()
+{
+if(f1.text2.value==" ")
+{
+alert("client code should not be blank");
+document.f1.text2.focus();
+}
+else if(f1.text3.value=="")
+{
+alert("client name should not be blank");
+document.f1.text3.focus();
+}
+else if(f1.text4.value=="")
+{
+alert("company name should not be blank");
+document.f1.text4.focus();
+}
+else if(f1.text5.value=="")
+{
+alert("company address should not be blank");
+document.f1.text5.focus();
+}
+else if(f1.text6.value=="")
+{
+alert("product name should not be blank");
+document.f1.text6.focus();
+}
+}
+</SCRIPT>
+<BODY bgcolor=lightyellow>
+<form name=f1 action="./companyinfo.html">
+
+<P><FONT size=4 style="BACKGROUND-COLOR: white"></FONT>&nbsp;</P><FONT size=4 
+style="BACKGROUND-COLOR: white">
+<P align=center><FONT size=5><STRONG>&nbsp;&nbsp;</STRONG></FONT> </P>
+<P align=center><FONT size=5><STRONG>&nbsp; <FONT 
+color=forestgreen><U>CompanyInfo</U></FONT></STRONG></FONT> </P></FONT>
+<P><FONT size=4 style="BACKGROUND-COLOR: white">&nbsp;
+<TABLE align=center border=1 cellPadding=1 cellSpacing=1 id=TABLE1 
+style="LEFT: 57px; TOP: 38px" width="75%">
+  <BODY bgcolor=lightyellow>
+  
+  <TR>
+    <TD>
+      <P align=center><STRONG>CLIENT 
+      CODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <INPUT id=text2 name=text2> </STRONG></P></TD></TR>
+  <TR>
+    <TD>
+      <P><STRONG>CLIENT&nbsp;&nbsp;&nbsp;NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <INPUT id=text3 name=text3></STRONG></P></TD></TR>
+  <TR>
+    <TD><STRONG>COMPANY 
+      NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <INPUT id=text4 name=text4 style="HEIGHT: 22px; WIDTH: 152px"> 
+</STRONG></TD></TR>
+  <TR>
+    <TD>
+      <P><STRONG>COMPANYADDRESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <INPUT id=text5 name=text5 
+      style="HEIGHT: 22px; WIDTH: 152px"> </STRONG></P></TD>
+  <TR>
+    <TD>
+      <P><STRONG>PRODUCT 
+      NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT 
+      id=text6 name=text6 style="HEIGHT: 37px; WIDTH: 237px" 
+     > </STRONG></P></TD></FONT>
+  <TR>
+    <TD>
+      <P><FONT size=4>EXPIRY 
+      DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<SELECT 
+      id=select2 name=select2 style="HEIGHT: 21px; WIDTH: 42px"> <OPTION 
+        value="">1</OPTION><OPTION value="">2</OPTION><OPTION 
+        value="">3</OPTION><OPTION value="">4</OPTION><OPTION 
+        value="">5</OPTION><OPTION value="">6</OPTION><OPTION 
+        value="">7</OPTION><OPTION value="">8</OPTION><OPTION 
+        value="">9</OPTION><OPTION value="">10</OPTION><OPTION 
+        value="">11</OPTION><OPTION value="">12</OPTION><OPTION 
+        value="">13</OPTION><OPTION value="">14</OPTION><OPTION 
+        value="">15</OPTION><OPTION value="">16</OPTION><OPTION 
+        value="">17</OPTION><OPTION value="">18</OPTION><OPTION selected 
+        value="">19</OPTION><OPTION value="">20</OPTION><OPTION 
+        value="">21</OPTION><OPTION value="">22</OPTION><OPTION 
+        value="">23</OPTION><OPTION value="">24</OPTION><OPTION 
+        value="">25</OPTION><OPTION value="">26</OPTION><OPTION 
+        value="">27</OPTION><OPTION value="">28</OPTION><OPTION 
+        value="">29</OPTION><OPTION value="">30</OPTION><OPTION 
+        value="">31</OPTION><OPTION value=""></OPTION><OPTION 
+      value=""></OPTION></SELECT><SELECT id=select1 name=select1 
+      style="HEIGHT: 22px; WIDTH: 55px"> <OPTION selected 
+        value="">JAN</OPTION><OPTION value="">FEB</OPTION><OPTION 
+        value="">MAR</OPTION><OPTION value="">APR</OPTION><OPTION 
+        value="">MAY</OPTION><OPTION value="">JUN</OPTION><OPTION 
+        value="">JUL</OPTION><OPTION value="">AUG</OPTION><OPTION 
+        value="">SEPT</OPTION><OPTION value="">OCT</OPTION><OPTION 
+        value="">NOV</OPTION><OPTION value="">DEC</OPTION><OPTION 
+        value=""></OPTION></SELECT>&nbsp; <INPUT id=text1 name=text1 
+      style="HEIGHT: 22px; WIDTH: 41px" value=03></FONT></P></TD></TR>
+  <TR>
+    <TD><FONT size=4>USER 
+      _ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT 
+      id=text7 name=text7 style="HEIGHT: 22px; WIDTH: 149px"> </FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT id=submit1 name=submit1 onclick=client_dts() type=button value=SAVE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT id=reset1 name=reset1 type=reset value=CLEAR></TD></TR></TBODY></TABLE></P>
+<P align=center>&nbsp;</P>
+<P align=center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</P>
+</form>
+</BODY>
+</HTML>
+
+
+
+
+<HTML>
+<BODY >
+<script language=vbscript>
+
+</script>
+<script language=vbscript>
+</script>
+</BODY>
+</HTML>
+<HTML>
+<BODY >
+<script language=vbscript>
+
+</script>
+<script language=vbscript>
+</script>
+</BODY>
+</HTML>
